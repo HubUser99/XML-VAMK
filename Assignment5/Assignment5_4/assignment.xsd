@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="addresses">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" ref="address"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="addressInfo">
+		<xs:sequence>
+			<xs:element ref="street"/>
+			<xs:element ref="postal_code"/>
+			<xs:element ref="city"/>
+			<xs:element ref="country"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--Here we define the elements-->
+	<xs:element name="street" type="xs:string"/>
+	<xs:element name="postal_code" type="xs:integer"/>
+	<xs:element name="city" type="xs:string"/>
+	<xs:element name="country" type="xs:string"/>
+	<xs:element name="address" type="addressInfo"/>
+	<!--Here we define the substitutes-->
+	<xs:element name="katu" substitutionGroup="street"/>
+	<xs:element name="postinumero" substitutionGroup="postal_code"/>
+	<xs:element name="kaupunki" substitutionGroup="city"/>
+	<xs:element name="maa" substitutionGroup="country"/>
+	<xs:element name="osoite" substitutionGroup="address"/>
+</xs:schema>

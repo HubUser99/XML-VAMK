@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<addresses xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<address>
+		<katu>Champ de Elise</katu>
+		<postal_code>9876</postal_code>
+		<kaupunki>Paris</kaupunki>
+		<country>France</country>
+	</address>
+	<osoite>
+		<street>Champ de Elise</street>
+		<postinumero>9876</postinumero>
+		<city>Paris</city>
+		<maa>France</maa>
+	</osoite>
+</addresses>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="houses">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element maxOccurs="unbounded" name="house" type="houseType"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="houseType">
+		<xs:sequence>
+			<xs:element name="address" type="addressType"/>
+			<xs:element name="room" maxOccurs="unbounded" type="roomType"/>
+			<xs:element name="sauna" maxOccurs="1" type="saunaType"/>
+			<xs:element name="balcony" maxOccurs="1" type="xs:boolean"/>
+			<xs:element ref="spa" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:ID"/>
+	</xs:complexType>
+	
+	<xs:complexType name="addressType">
+		<xs:sequence>
+			<xs:element name="street" type="xs:string"/>
+			<xs:element name="postal_code" type="xs:integer"/>
+			<xs:element name="city" type="xs:string"/>
+			<xs:element name="country" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:simpleType name="basicRoomType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Bedroom"/>
+			<xs:enumeration value="Living room"/>
+			<xs:enumeration value="Kitchen"/>
+			<xs:enumeration value="Hall"/>
+			<xs:enumeration value="Kid's Bedroom"/>
+			<xs:enumeration value="Office"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="roomType">
+		<xs:simpleContent>
+			<xs:extension base="basicRoomType">
+				<xs:attribute name="area" type="xs:float" use="required"/>
+				<xs:attribute name="unit" type="xs:string" use="optional"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="saunaType">
+		<xs:simpleContent>
+      		<xs:extension base="xs:boolean"/>
+      	</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="spaType">
+		<xs:simpleContent>
+      		<xs:extension base="xs:boolean"/>
+      	</xs:simpleContent>
+	</xs:complexType>
+
+	<!-- Elements and substitutions -->
+	<xs:element name="spa" type="spaType"/>
+
+	<xs:element name="kylpylä" substitutionGroup="spa"/>
+</xs:schema>

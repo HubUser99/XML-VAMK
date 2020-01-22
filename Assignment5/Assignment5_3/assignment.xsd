@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="elements">
+		<xs:complexType>
+			<xs:group ref="elementsGroup"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:group name="elementsGroup">
+		<xs:sequence>
+			<xs:element ref="element1"/>
+			<xs:element ref="element2"/>
+		</xs:sequence>
+	</xs:group>
+
+	<xs:attributeGroup name="elementAttributesGroup">
+		<xs:attribute name="colour" type="xs:string"/>
+		<xs:attribute name="shape" type="xs:string"/>
+	</xs:attributeGroup>
+
+	<xs:complexType name="elementType">
+		<xs:attributeGroup ref="elementAttributesGroup"/>
+	</xs:complexType>
+
+	<xs:element name="element1" type="elementType" block="substitution"/>
+	<xs:element name="element2" type="elementType" block="substitution"/>
+</xs:schema>

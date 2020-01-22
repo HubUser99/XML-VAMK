@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<assignment number="A4">
+	<instruction language="en">
+		Solve the problems and submit your solutions before the 
+		<deadline format="FI">2012-10-01</deadline>
+		.
+	</instruction>
+	<problem id="P41">
+		See the description of the problem number 
+		<pnumber value="P41"/>
+		.
+	</problem>
+	<problem id="P42">
+		See the description of the problem number 
+		<pnumber value="P42"/>
+		. Hint: 
+		<hint type="optional">Refer to the lecture examples for more help!</hint>
+	</problem>
+</assignment>

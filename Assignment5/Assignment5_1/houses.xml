@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<houses xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<house id="H1000">
+		<address>
+			<street>Sunny Street 8</street>
+			<postal_code>65200</postal_code>
+			<city>Vaasa</city>
+			<country>Finland</country>
+		</address>
+		<room area="12.34" unit="square_meter">Kitchen</room>
+		<room area="25.34">Bedroom</room>
+		<sauna>true</sauna>
+		<balcony>false</balcony>
+		<spa>true</spa>
+	</house>
+	<house id="H2000">
+		<address>
+			<street>Beach Street 6</street>
+			<postal_code>65100</postal_code>
+			<city>Stockholm</city>
+			<country>Sweden</country>
+		</address>
+		<room area="16.00">Kitchen</room>
+		<room area="30.40">Bedroom</room>
+		<room area="15.30" unit="square_feet">Kid's Bedroom</room>
+		<room area="45.80">Living room</room>
+		<room area="65.20">Office</room>
+		<sauna>true</sauna>
+		<balcony>true</balcony>
+		<kylpylä>true</kylpylä>
+	</house>
+</houses>

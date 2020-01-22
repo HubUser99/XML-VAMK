@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<xs:schema
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://myNamespace.com"
+	xmlns:mstns="http://myNamespace.com"
+	targetNamespace="http://myNamespace.com"
+	elementFormDefault="qualified"
+>
+	<xs:element name="task_3">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element name="flights" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="flight" maxOccurs="unbounded" type="flightType"/>
+						</xs:sequence>
+					</xs:complexType>
+					<xs:unique name="uniqueFlightNumbers">
+						<xs:selector xpath="mstns:flight"/>
+						<xs:field xpath="@flightNumber"/>
+					</xs:unique>
+				</xs:element>
+				<xs:element name="passengers" minOccurs="1" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="passenger" maxOccurs="unbounded" type="passengerType"/>
+						</xs:sequence>
+					</xs:complexType>
+					<xs:unique name="uniqueSeatNumbers">
+						<xs:selector xpath="mstns:passenger"/>
+						<xs:field xpath="@seatNumber"/>
+					</xs:unique>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="flightType" mixed="true">
+		<xs:sequence>
+			<xs:element name="dateAndTime" type="xs:date"/>
+			<xs:element name="origin" type="xs:string"/>
+			<xs:element name="destination" type="xs:string"/>
+			<xs:element name="price">
+				<xs:simpleType>
+					<xs:restriction base="xs:decimal">
+		        		<xs:fractionDigits value="2" />
+		    		</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute  name="flightNumber">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[A-Z][5-9]{4}"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+
+	<xs:complexType name="passengerType" mixed="true">
+		<xs:sequence>
+			<xs:element name="flightNumber">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="[A-Z][5-9]{4}"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="firstName" type="xs:string"/>
+			<xs:element name="lastName" type="xs:string"/>
+			<xs:element name="phoneNumber">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="[+][0-9]{3}[-][0-9]{2}[-][0-9]{7}"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="diet">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="vegetarian"/>
+						<xs:enumeration value="carnivore"/>
+						<xs:enumeration value="allergic"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="travellingClass">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="business"/>
+						<xs:enumeration value="plus"/>
+						<xs:enumeration value="economy"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute  name="seatNumber">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[_][1-9][0-5]"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+</xs:schema>

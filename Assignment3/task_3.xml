@@ -1,0 +1,70 @@
+<?xml version="1.0" standalone="yes"?>
+
+<task_3
+	xmlns="http://myNamespace.com"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://myNamespace.com task_3.xsd"
+>
+	<flights>
+		<flight flightNumber="A5678">
+			<dateAndTime>2019-10-25</dateAndTime>
+			<origin>Vaasa</origin>
+			<destination>Helsinki</destination>
+			<price>299.50</price>
+		</flight>
+		<flight flightNumber="B6789">
+			<dateAndTime>2019-11-27</dateAndTime>
+			<origin>Helsinki</origin>
+			<destination>Tampere</destination>
+			<price>329.65</price>
+		</flight>
+		<flight flightNumber="C7856">
+			<dateAndTime>2019-12-05</dateAndTime>
+			<origin>Tampere</origin>
+			<destination>Rovaniemi</destination>
+			<price>555.15</price>
+		</flight>
+	</flights>
+	<passengers>
+		<passenger seatNumber="_10">
+			<flightNumber>A5678</flightNumber>
+			<firstName>Joe</firstName>
+			<lastName>Doe</lastName>
+			<phoneNumber>+358-40-1234567</phoneNumber>
+			<diet>vegetarian</diet>
+			<travellingClass>business</travellingClass>
+		</passenger>
+		<passenger seatNumber="_21">
+			<flightNumber>B6789</flightNumber>
+			<firstName>John</firstName>
+			<lastName>Don</lastName>
+			<phoneNumber>+358-40-1234567</phoneNumber>
+			<diet>carnivore</diet>
+			<travellingClass>plus</travellingClass>
+		</passenger>
+		<passenger seatNumber="_32">
+			<flightNumber>B6789</flightNumber>
+			<firstName>Joseph</firstName>
+			<lastName>Don</lastName>
+			<phoneNumber>+358-40-1234567</phoneNumber>
+			<diet>allergic</diet>
+			<travellingClass>economy</travellingClass>
+		</passenger>
+		<passenger seatNumber="_43">
+			<flightNumber>A5678</flightNumber>
+			<firstName>Jane</firstName>
+			<lastName>Doe</lastName>
+			<phoneNumber>+358-40-1234567</phoneNumber>
+			<diet>vegetarian</diet>
+			<travellingClass>business</travellingClass>
+		</passenger>
+		<passenger seatNumber="_54">
+			<flightNumber>C7856</flightNumber>
+			<firstName>Jenifer</firstName>
+			<lastName>Dane</lastName>
+			<phoneNumber>+358-40-1234567</phoneNumber>
+			<diet>carnivore</diet>
+			<travellingClass>plus</travellingClass>
+		</passenger>
+	</passengers>
+</task_3>
