@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="./shop.xsl" ?>
+<shop>
+	<digital_media>
+		<cds>
+			<cd id="c10" length="90">
+				<title language="EN">Imagine</title>
+				<artist>John Lennon</artist>
+				<country>England</country>
+				<company>JL. Songs</company>
+				<price discount="0.05">10.90</price>
+				<publication_year>1978</publication_year>
+			</cd>
+			<cd id="c20" length="45">
+				<title language="FI">Vain Tänään</title>
+				<artist>Anna Taikka</artist>
+				<country>Finland</country>
+				<company>Finnish Song</company>
+				<price discount="0.08">40.90</price>
+				<publication_year>2005</publication_year>
+			</cd>
+			<cd id="c30" length="120">
+				<title language="EN">Uprising</title>
+				<artist>Bob Marley</artist>
+				<country>Jamaica</country>
+				<company>JL. Songs</company>
+				<price discount="0.12">8.90</price>
+				<publication_year>1978</publication_year>
+			</cd>
+			<cd id="c40" length="90">
+				<title>That's the Way It Is</title>
+				<artist>Elvis Presley</artist>
+				<country>USA</country>
+				<company>Nostalgic Song</company>
+				<price discount="0.20">30.90</price>
+				<publication_year>2008</publication_year>
+			</cd>
+		</cds>
+		<videos>
+			<video id="v10" age_limit="18">
+				<title language="EN">Scarry Movie</title>
+				<artist>Johnny Unknown</artist>
+				<country>Germany</country>
+				<company>Thriller Movies GMBH</company>
+				<price discount="0.08">23.90</price>
+				<publication_year>2010</publication_year>
+			</video>
+			<video id="v20" age_limit="16">
+				<title language="EN">Apocalypto</title>
+				<artist>Garcia</artist>
+				<country>Mexico</country>
+				<company>Latin America Features</company>
+				<price discount="0.06">32.90</price>
+				<publication_year>2006</publication_year>
+			</video>
+			<video id="v30" age_limit="12">
+				<title language="EN">Troy</title>
+				<artist>Brad Pit</artist>
+				<country>US</country>
+				<company>Ancient Movies</company>
+				<price discount="0.15">25.90</price>
+				<publication_year>2000</publication_year>
+			</video>
+			<video id="v40" age_limit="15">
+				<title lanuage="FI">Kauas pilvet karkaavat</title>
+				<artist>Kati Outinen</artist>
+				<country>US</country>
+				<company>Aki Kaurismäen</company>
+				<price discount="0.25">40.90</price>
+				<publication_year>1976</publication_year>
+			</video>
+		</videos>
+	</digital_media>
+</shop>
